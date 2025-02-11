@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  @apply first-letter:text-pink-500 text-5xl font-bold whitespace-nowrap border-b;
+  @apply first-letter:text-pink-500 text-5xl font-bold whitespace-nowrap;
   font-family: var(--font-poiret-one);
 }
 
@@ -39,7 +39,7 @@ p {
 }
 
 section {
-  @apply bg-black bg-opacity-80 mx-6 mt-6 p-4 max-w-[40rem] rounded-br-2xl;
+  @apply border border-slate-800 bg-opacity-80 mx-6 mt-6 p-4 max-w-[40rem] rounded-br-2xl;
 }
 
 a {
@@ -48,4 +48,37 @@ a {
 
 :target {
   scroll-margin-top: 5rem;
+}
+
+#intro {
+  -webkit-box-shadow: 0px 0px 42px -2px rgba(114, 120, 125, 0.28);
+  -moz-box-shadow: 0px 0px 42px -2px rgba(114, 120, 125, 0.28);
+  box-shadow: 0px 0px 42px -2px rgba(114, 120, 125, 0.28);
+}
+
+#nature {
+  @apply bg-gradient-to-br from-green-950 to-95%;
+  -webkit-box-shadow: 0px 0px 42px -2px rgba(31, 171, 127, 0.28);
+  -moz-box-shadow: 0px 0px 42px -2px rgba(31, 171, 127, 0.28);
+  box-shadow: 0px 0px 42px -2px rgba(31, 171, 127, 0.28);
+}
+
+#anticap {
+  @apply bg-gradient-to-br from-red-950 to-95%;
+  -webkit-box-shadow: 0px 0px 42px -2px rgba(173, 31, 88, 0.38);
+  -moz-box-shadow: 0px 0px 42px -2px rgba(173, 31, 88, 0.38);
+  box-shadow: 0px 0px 42px -2px rgba(173, 31, 88, 0.38);
+}
+
+#equality {
+  @apply bg-gradient-to-br from-cyan-950 to-95%;
+  -webkit-box-shadow: 0px 0px 42px -2px rgba(32, 109, 171, 0.28);
+  -moz-box-shadow: 0px 0px 42px -2px rgba(32, 109, 171, 0.28);
+  box-shadow: 0px 0px 42px -2px rgba(32, 109, 171, 0.28);
+}
+
+#pfp {
+  -webkit-box-shadow: 0px 0px 42px -2px rgba(125, 116, 86, 0.28);
+  -moz-box-shadow: 0px 0px 42px -2px rgba(125, 116, 86, 0.28);
+  box-shadow: 0px 0px 42px -2px rgba(125, 116, 86, 0.28);
 }
