@@ -3,19 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
+  @apply m-2;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  @apply first-letter:text-pink-500 text-5xl font-bold whitespace-nowrap border-b;
+  font-family: var(--font-poiret-one);
+}
+
+h2 {
+  @apply opacity-50 text-4xl tracking-widest;
+  font-family: var(--font-poiret-one);
+}
+
+h3 {
+  @apply text-3xl mb-2 border-t border-l p-1 tracking-wider;
+  font-family: var(--font-quicksand);
+}
+
+p {
+  @apply mb-4;
+  font-family: var(--font-quicksand);
+}
+
+section {
+  @apply bg-black bg-opacity-80 mx-6 mt-6 p-4 max-w-[40rem] rounded-br-2xl;
+}
+
+a {
+  @apply px-4 py-2 border-0 lg:border mx-1 lg:rounded-b-2xl transition-all hover:bg-white hover:text-black bg-opacity-50;
+}
+
+:target {
+  scroll-margin-top: 5rem;
 }

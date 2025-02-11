@@ -1,101 +1,213 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="">
+      <Image
+        className="fixed w-screen h-screen -z-50 opacity-5"
+        src="/morningwood.jpg"
+        alt="Background"
+        width={700}
+        height={700}
+      />
+      <div className="fixed md:block hidden h-screen top-0 right-0 w-10 bg-[#080401]"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className=" ">
+        <div className="sticky top-0 bg-black bg-opacity-80 z-50 backdrop-blur">
+          <h1>Aaro Viitanen</h1>
+          <div className="flex flex-row">
+            <h2 className="font-bold text-5xl text-pink-500">V</h2>
+            <h2 className="-mt-1">asemmistoliitto</h2>
+          </div>
+          <div className="z-50 w-screen md:h-[2.30rem] h-20 content-center lg:pr-10 text-center lg:-mt-12 lg:text-right lg:border-b-0 border-y">
+            <Link href={'#intro'}>Esittäytyminen</Link>
+            <Link href={'#nature'}>Ympäristönsuojelu</Link>
+            <Link href={'#equality'}>Tasa-arvo & ihmisoikeudet</Link>
+            <Link href={'#anticap'}>Antikapitalismi</Link>
+          </div>
         </div>
+        <Image
+          className="md:absolute md:right-10 top-28 content-center rounded-full md:rounded-l-none -scale-x-100 -z-50"
+          src="/aaro.jpg"
+          alt="Aaro Viitanen"
+          width={700}
+          height={700}
+        />
+        <section id="intro">
+          <h3>Esittäytyminen</h3>
+          <p>
+            Olen Aaro Viitanen, 26-vuotias muusikko ja musiikkikasvatuksen
+            opiskelija Jyväskylästä. Olen Vasemmistoliiton ehdokkaana kevään
+            2025 kuntavaaleissa, koska politiikka ja siinä mukana oleminen on
+            kiinnostanut aina, ja nyt jos koskaan tarvitaan täyskäännös pois
+            nykyisen hallituksen ajamasta brutaalin oikeistolaisesta
+            politiikasta. Tämänhetkinen jatkuvaan kasvuun pohjautuva
+            kapitalistinen yhteiskuntajärjestelmämme on ajanut planeetan
+            massiiviseen ekokatastrofiin, ja meidän on mahdollisimman pian
+            kehitettävä vähemmän tuhoisa vaihtoehto pyörittää yhteiskuntaa.
+            Kestävän yhteiskunnan luominen on suuri prosessi, joka vaatii toimia
+            yhteiskunnan kaikilta tasoilta, eli myös kunnilta.
+          </p>
+          <p>
+            Puoluepolitiikan suhteen olen vielä noviisi, ja nämä ovat
+            ensimmäiset vaalit, joihin olen ehdolla. Minulla on kuitenkin jonkin
+            verran ulkoparlamentaarista poliittista kokemusta mielenosoituksiin
+            ja kansalaisaktivismiin sekä niiden järjestämiseen osallistumisesta
+            esimerkiksi No Cuts Jkl –kollektiivin riveissä. Olen myös tehnyt
+            vuosia someaktivismia erään keskikokoisen poliittisen meemitilin
+            ylläpitäjänä Instagramissa ja osallistunut aktiivisesti poliittiseen
+            keskusteluun niin sosiaalisen median alustoilla kuin ihmisten kanssa
+            kasvotusten. Minulla tulee varmasti olemaan paljon opittavaa
+            kuntapolitiikasta, mutta mielestäni tärkeintä onkin se, että olen
+            valmis oppimaan, kuuntelemaan ja keskustelemaan avoimin mielin,
+            samalla kuitenkin omasta arvomaailmastani tiukasti kiinni pitäen.
+          </p>
+        </section>
+        <section id="nature">
+          <h3>Ympäristönsuojelu</h3>
+          <p>
+            Ympäristö ja kestävä elämäntyyli ovat poliittisen ajatteluni
+            keskiössä, ja vaikka globaalien ympäristöongelmien ratkaiseminen
+            vaatii tekoja etenkin politiikan ylimmiltä tasoilta kuten
+            valtionjohdolta, niin uskon, että myös kuntatasolla voi tehdä
+            paljon. Jatkuvaan talouskasvuun pyrkiminen resursseiltaan
+            rajallisella planeetalla on pitkässä juoksussa täysin mahdoton
+            yhtälö. Kapitalistinen kertakäyttökulttuuri kannustaa voittojen
+            maksimoinnin nimissä tuottamaan kaiken halvasti ja kestämättömästi,
+            jotta tuotteen rikkoutuessa kuluttaja ostaisi aina uutta tilalle.
+            Kuntapolitiikassa pitäisikin pyrkiä mahdollisimman paljon
+            ylläpitämään ja uusiokäyttämään kaikkea jo rakennettua
+            infrastruktuuria jatkuvan purkamisen ja uudelleenrakentamisen
+            sijasta. Vaille käyttöä jäävät rakennukset tulisi antaa käyttöön
+            esimerkiksi erilaisille harrastaja- tai kulttuuritoimijoille.
+            Alakulttuuritalo Kramsu on loistava esimerkki tällaisesta
+            toiminnasta. Myös kaikenlainen julkisten rakennusten – kuten
+            koulujen - hyödyntäminen iltaisin harrastustoimintaan on mielestäni
+            fiksua kuntapolitiikkaa.
+          </p>
+          <p>
+            Olen kiinnostunut selvittämään, kuinka paljon pystyisimme
+            kunnallispoliittisilla päätöksillä vaikuttamaan laitoskeittiöiden ja
+            kauppojen hävikkiruoan määrään. Haluaisin, että kaikilla ruoan
+            kanssa tekemisissä olevilla yrityksillä olisi velvollisuus jakaa tai
+            myydä halvalla muutoin hävikkiin meneviä ruokia eteenpäin. Sekä
+            työntekijöillä että laitoskeittiöiden piirissä olevilla asiakkailla
+            pitäisi olla mahdollisuus ottaa päivän jälkeen hävikkiruoat mukaansa
+            roskiin heittämisen sijaan. Haluaisin olla kehittämässä
+            järjestelmää, jossa hävikkiruoat saataisiin tehokkaammin jaettua
+            esimerkiksi leipäjonojen kautta apua tarvitseville.
+          </p>
+          <p>
+            Kunnan ostopäätöksissä tulee suosia paikallista ja kestävää - en näe
+            järkeä siinä, että esimerkiksi Kiinassa tuotetaan vaatteita
+            Eurooppaan, kun Euroopassa voisi tuottaa vaatteita Eurooppaan. Ainoa
+            peruste tälle onkin se, että monessa Euroopan ulkopuolisessa
+            valtiossa on helpommin saatavilla hyväksikäytettävää halpatyövoimaa.
+            Tämä on yksi hyvä esimerkki siitä, kuinka ilmastokysymykset
+            kytkeytyvät myös ihmisoikeuskysymyksiin, ja ilmaston kannalta
+            kestävät poliittiset päätökset ovat myös ihmisoikeuksien kannalta
+            parempia.
+          </p>
+        </section>
+        <section id="equality">
+          <h3>Tasa-arvo & ihmisoikeudet</h3>
+          <p>
+            Tasa-arvoon ja oikeudenmukaisuuteen pyrkimisen kuuluisi olla
+            yhteiskunnan perusolettamus, mutta silti useiden eri vähemmistöjen
+            sekä köyhien ja heikommassa asemassa olevien oikeuksien
+            puolustaminen vaatii jatkuvaa taistelua. Olen kuitenkin lopen
+            kyllästynyt nykyisen kaltaisiin kulttuurisotiin ja
+            keskustelukulttuuriin aiheen suhteen. Haluan tehdä osani
+            edistääkseni rakentavaa keskustelukulttuuria, jossa ihmisoikeudet
+            ovat tinkimätön tavoite eivätkä mielipideasia, ja jossa
+            kouluttautumisen ja vähemmistöjen kokemusten kuuntelemisen kautta
+            alettaisiin puhumaan konkreettisista toimista. Rasistit, ableistit
+            ja homo- ja transfoobikot eivät tarvitse lisää tilaa tai megafoneja.
+            Mielestäni oikeiston moraalipanikoijat voidaan jättää keskenään
+            omaan arvoonsa, jotta tasa-arvoasioita saadaan ajettua
+            mahdollisimman häiriöttä eteenpäin.
+          </p>
+          <p>
+            Tiedostan, että kunnanvaltuutettuna tai kuntavaaliehdokkaana ei voi
+            tehdä määräänsä enempää maailmanpolitiikan suurien linjojen eteen,
+            mutta jotta äänestäjät tietävät, millaista ehdokasta ovat
+            äänestämässä, niin haluan myös ilmaista vahvat tuntemukseni
+            ulkopolitiikan kysymyksistä, jotka peilaavat hyvin
+            ihmisoikeuskäsityksiäni, ja jotka varmasti vaikuttaisivat
+            päätöksentekooni tilanteen tullen mikäli päädyn valtuutetuksi.
+            Mielestäni Suomen pitäisi tiukemmin tuomita muiden valtioiden –
+            erityisesti omien liittolaistensa - ihmisoikeusrikkomukset, sekä
+            boikotoida ja kieltäytyä rahoittamasta tällaisten valtioiden toimia.
+            Olen esimerkiksi vahva vapaan Palestiinan ja palestiinalaisten
+            itsemääräämisoikeuden kannattaja, ja Suomen liittolaisuus ja
+            asekaupat kansanmurhaa ja rotusortoa toteuttavan Israelin kanssa
+            ovat häpeäpilkku, josta meidän olisi pitänyt kauan sitten siirtyä
+            pois. NATO-jäsenyytemme ja valtionjohtomme suopea suhtautuminen
+            Yhdysvaltoihin ovat muutenkin, mutta etenkin nyt Donald Trumpin
+            vaalivoiton myötä, asia johon suhtaudun todella kriittisesti.
+            Sotilasliittoon mentiin liian innokkaasti pelon ja militaristisen
+            ajattelun provosoimana, ja Yhdysvaltojen ajaessa imperialistista
+            ulkopolitiikkaa minun on vaikea nähdä, miten tämä eroaa moraalisesti
+            esimerkiksi siitä, että olisimme Putinin Venäjän kanssa liitossa.
+            Maailmassa, jossa itseään täynnä olevat militaristijohtajat
+            uhittelevat kilpaa toisilleen, tarvitaan enemmän diplomatiaa ja
+            de-eskalaatiota jatkuvan kilpa-asevarustelun sijaan. Suomen olisi
+            ulkopolitiikassa myös tehtävä kaikkensa köyhimpien maiden
+            itsemääräämisoikeuden takaamisen eteen. Edelleen esimerkiksi Afrikan
+            manner on Länsimaiden uuskolonialistisessa otteessa, kun monen
+            Afrikan maan luonnonvarat varastetaan suuryritysten toiminnan kautta
+            Länsimaiden käyttöön lähtömaiden pysyessä köyhinä.
+          </p>
+          <p>
+            Nyt jos koskaan on aika laittaa yhteiskuntamme peruspilarit uusiksi,
+            lopettaa luonnon ja ihmisten riisto, tehdä varallisuuden
+            uudelleenjakoa rikkailta leikaten, päästää irti jatkuvan kasvun
+            tavoittelusta ja pyrkiä tuottamaan hyödykkeitä kestävästi vain sen
+            verran kuin niitä oikeasti tarvitaan. Ei anneta epätoivon voittaa!
+          </p>
+        </section>
+        <section id="anticap">
+          <h3>Antikapitalismi</h3>
+          <p>
+            Politiikassa ollaan jo pitkään menty sillä suunnalla, että vain
+            rahalla on väliä ja vahvimmat selviävät. Kampanjani pyrkii menemään
+            vastakarvaan tälle suunnalle – sen sijaan että panostetaan vain
+            kaikkeen, mikä tuottaa rahaa, olisi tärkeä panostaa siihen, mikä
+            tuottaa hyvinvointia. Ymmärrän tietysti, miksi taloudellinen tuotto
+            on tärkeä elementti ottaa huomioon päätöksenteossa ja miten
+            kapitalistisessa maailmassa hyvinvointi on monelta osin sidoksissa
+            rahan määrään, mutta kyseenalaistan vahvasti pelkän raha silmissä
+            etenemisen hyödyn pitkässä juoksussa. Suuret Kirkkopuiston
+            parkkihallin kaltaiset hankkeet tehdään tuoton ja kasvun vuoksi,
+            mutta valitettavan usein tällaisissa tapauksissa tuotto menee
+            pääosin isoille yrityksille, eikä päädy näkymään tavallisten
+            kansalaisten elämässä muuten kuin lakkautettuina kyläkouluina.
+            Pelkkä isojen yritysten etu ei ole paras lähtökohta kunnan
+            hyvinvoinnille – on tärkeä panostaa siihen, että kunnassa
+            viihdytään, jolloin asukkaat haluavat todennäköisemmin myös jatkaa
+            siellä asumista. Panostamalla monipuoliseen kulttuuritarjontaan ja
+            matalan kynnyksen toimintamahdollisuuksien ja tilojen luomiseen
+            saamme pidettyä Jyväskylän kaupunkina, johon moni ihminen innostuu
+            jäämään esimerkiksi opiskelujensa jälkeen asumaan. On myös tärkeää,
+            etteivät palvelut keskity pelkästään keskustan alueelle, vaan myös
+            syrjäisemmissä taajamissa asuminen saataisiin pidettyä mielekkäänä.
+          </p>
+          <p>
+            Kuulen usein puhuttavan, ettei Suomessa olisi korruptiota, mutta
+            väite on mielestäni naurettava. Isoilla yrityksillä on varaa
+            lahjoittaa heille mieleisten poliitikkojen vaalikampanjoihin, ja
+            monet poliitikot ovat myös itse yritysten johtoportaissa.
+            Lobbauksella ja hyvävelikerhoilla varmistetaan sellaiset poliittiset
+            päätökset ja hankkeet, joilla yritykset pystyvät tekemään tuottoa.
+            Mielestäni yksi isoimmista vahvuuksistani poliitikkona olisikin se,
+            ettei minulla ole rahaa kiinni missään yrityksissä, ei kiinnostusta
+            sijoittamiseen, eikä tavoitteeni henkilökohtaisessa elämässäni ole
+            rikastua, joten äänestäjät voivat luottaa, että kunnanvaltuutettuna
+            tekisin päätöksiä aidosti kunnan asukkaiden parasta ajatellen.
+          </p>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
