@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from './accordion';
+import Head from 'next/head';
 
 type AccordionProps = {
   id: string;
@@ -176,74 +177,82 @@ const list: AccordionProps[] = [
 
 export default function Home() {
   return (
-    <div className=''>
-      <Image
-        className='fixed w-screen h-screen -z-50 opacity-5'
-        src='/morningwood.jpg'
-        alt='Background'
-        width={700}
-        height={700}
-      />
-      <div className='fixed md:block hidden h-screen top-0 right-0 w-10 bg-[#080401]'></div>
-
-      <main className=' '>
-        <div className='sticky border-b top-0 bg-black bg-opacity-50 z-50 backdrop-blur'>
-          <h1>Aaro Viitanen</h1>
-          <div className='flex flex-row'>
-            <h2 className='font-bold text-5xl text-pink-500'>V</h2>
-            <h2 className='-mt-1'>asemmistoliitto</h2>
-          </div>
-        </div>
+    <>
+      <Head>
+        <title>Aaro Viitanen</title>
+        <meta name='description' content='Aaro Viitasen portfolio-sivu' />
+      </Head>
+      <div className=''>
         <Image
-          id='pfp'
-          className='md:fixed md:right-10 top-28 content-center rounded-full md:rounded-l-none -scale-x-100 -z-50'
-          src='/aaro.jpg'
-          alt='Aaro Viitanen'
-          width={500}
-          height={500}
+          className='fixed w-screen h-screen -z-50 opacity-5'
+          src='/morningwood.jpg'
+          alt='Background'
+          width={700}
+          height={700}
         />
-        <section id='intro'>
-          <h3>Esittäytyminen</h3>
-          <p>
-            Olen Aaro Viitanen, 26-vuotias muusikko ja musiikkikasvatuksen
-            opiskelija Jyväskylästä. Olen Vasemmistoliiton ehdokkaana kevään
-            2025 kuntavaaleissa, koska politiikka ja siinä mukana oleminen on
-            kiinnostanut aina, ja nyt jos koskaan tarvitaan täyskäännös pois
-            nykyisen hallituksen ajamasta brutaalin oikeistolaisesta
-            politiikasta. Tämänhetkinen jatkuvaan kasvuun pohjautuva
-            kapitalistinen yhteiskuntajärjestelmämme on ajanut planeetan
-            massiiviseen ekokatastrofiin, ja meidän on mahdollisimman pian
-            kehitettävä vähemmän tuhoisa vaihtoehto pyörittää yhteiskuntaa.
-            Kestävän yhteiskunnan luominen on suuri prosessi, joka vaatii toimia
-            yhteiskunnan kaikilta tasoilta, eli myös kunnilta.
-          </p>
-          <p>
-            Puoluepolitiikan suhteen olen vielä noviisi, ja nämä ovat
-            ensimmäiset vaalit, joihin olen ehdolla. Minulla on kuitenkin jonkin
-            verran ulkoparlamentaarista poliittista kokemusta mielenosoituksiin
-            ja kansalaisaktivismiin sekä niiden järjestämiseen osallistumisesta
-            esimerkiksi No Cuts Jkl –kollektiivin riveissä. Olen myös tehnyt
-            vuosia someaktivismia erään keskikokoisen poliittisen meemitilin
-            ylläpitäjänä Instagramissa ja osallistunut aktiivisesti poliittiseen
-            keskusteluun niin sosiaalisen median alustoilla kuin ihmisten kanssa
-            kasvotusten. Minulla tulee varmasti olemaan paljon opittavaa
-            kuntapolitiikasta, mutta mielestäni tärkeintä onkin se, että olen
-            valmis oppimaan, kuuntelemaan ja keskustelemaan avoimin mielin,
-            samalla kuitenkin omasta arvomaailmastani tiukasti kiinni pitäen.
-          </p>
-        </section>
-        <Accordion>
-          {list.map((item) => (
-            <section key={item.id} id={item.id}>
-              <AccordionItem id={item.id}>
-                <AccordionTrigger> {item.title}</AccordionTrigger>
-                <AccordionContent>{item.description}</AccordionContent>
-              </AccordionItem>
-            </section>
-          ))}
-        </Accordion>
-      </main>
-      {/* ------------------ */}
-    </div>
+        <div className='fixed md:block hidden h-screen top-0 right-0 w-10 bg-[#080401]'></div>
+
+        <main className=' '>
+          <div className='sticky border-b top-0 bg-black bg-opacity-50 z-50 backdrop-blur'>
+            <h1>Aaro Viitanen</h1>
+            <div className='flex flex-row'>
+              <h2 className='font-bold text-5xl text-pink-500'>V</h2>
+              <h2 className='-mt-1'>asemmistoliitto</h2>
+            </div>
+          </div>
+          <Image
+            id='pfp'
+            className='md:fixed md:right-10 top-28 mt-4 md:mt-0 content-center rounded-full md:rounded-l-none -scale-x-100 -z-50'
+            src='/aaro.jpg'
+            alt='Aaro Viitanen'
+            width={500}
+            height={500}
+          />
+          <section id='intro'>
+            <h3>Tervehdys!</h3>
+            <p>
+              Olen Aaro Viitanen, 26-vuotias muusikko ja musiikkikasvatuksen
+              opiskelija Jyväskylästä. Olen Vasemmistoliiton ehdokkaana kevään
+              2025 kuntavaaleissa, koska politiikka ja siinä mukana oleminen on
+              kiinnostanut aina, ja nyt jos koskaan tarvitaan täyskäännös pois
+              nykyisen hallituksen ajamasta brutaalin oikeistolaisesta
+              politiikasta. Tämänhetkinen jatkuvaan kasvuun pohjautuva
+              kapitalistinen yhteiskuntajärjestelmämme on ajanut planeetan
+              massiiviseen ekokatastrofiin, ja meidän on mahdollisimman pian
+              kehitettävä vähemmän tuhoisa vaihtoehto pyörittää yhteiskuntaa.
+              Kestävän yhteiskunnan luominen on suuri prosessi, joka vaatii
+              toimia yhteiskunnan kaikilta tasoilta, eli myös kunnilta.
+            </p>
+            <p>
+              Puoluepolitiikan suhteen olen vielä noviisi, ja nämä ovat
+              ensimmäiset vaalit, joihin olen ehdolla. Minulla on kuitenkin
+              jonkin verran ulkoparlamentaarista poliittista kokemusta
+              mielenosoituksiin ja kansalaisaktivismiin sekä niiden
+              järjestämiseen osallistumisesta esimerkiksi No Cuts Jkl
+              –kollektiivin riveissä. Olen myös tehnyt vuosia someaktivismia
+              erään keskikokoisen poliittisen meemitilin ylläpitäjänä
+              Instagramissa ja osallistunut aktiivisesti poliittiseen
+              keskusteluun niin sosiaalisen median alustoilla kuin ihmisten
+              kanssa kasvotusten. Minulla tulee varmasti olemaan paljon
+              opittavaa kuntapolitiikasta, mutta mielestäni tärkeintä onkin se,
+              että olen valmis oppimaan, kuuntelemaan ja keskustelemaan avoimin
+              mielin, samalla kuitenkin omasta arvomaailmastani tiukasti kiinni
+              pitäen.
+            </p>
+          </section>
+          <Accordion>
+            {list.map((item) => (
+              <section key={item.id} id={item.id}>
+                <AccordionItem id={item.id}>
+                  <AccordionTrigger> {item.title}</AccordionTrigger>
+                  <AccordionContent>{item.description}</AccordionContent>
+                </AccordionItem>
+              </section>
+            ))}
+          </Accordion>
+        </main>
+        {/* ------------------ */}
+      </div>
+    </>
   );
 }
