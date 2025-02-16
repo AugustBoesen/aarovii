@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import {
   Accordion,
@@ -20,9 +21,18 @@ const list: AccordionProps[] = [
     id: 'nature',
     title: <h3 className='text-green-100'>Ympäristönsuojelu</h3>,
     description: (
-      <>
+      <motion.div
+        initial={{ opacity: 0, scaleY: 0 }}
+        animate={{
+          opacity: 1,
+          scaleY: 1,
+          transition: { type: 'ease-in', duration: 0.5 },
+        }}
+        exit={{ opacity: 0, scaleY: 0 }}
+        style={{ transformOrigin: 'top' }}
+      >
         <p>
-          Ympäristö ja kestävä elämäntyyli ovat poliittisen ajatteluni
+          <b>Ympäristö ja kestävä elämäntyyli</b> ovat poliittisen ajatteluni
           keskiössä, ja vaikka globaalien ympäristöongelmien ratkaiseminen
           vaatii tekoja etenkin politiikan ylimmiltä tasoilta kuten
           valtionjohdolta, niin uskon, että myös kuntatasolla voi tehdä paljon.
@@ -41,7 +51,7 @@ const list: AccordionProps[] = [
           harrastustoimintaan on mielestäni fiksua kuntapolitiikkaa.
         </p>
         <p>
-          Olen kiinnostunut selvittämään, kuinka paljon pystyisimme
+          <b>Olen kiinnostunut selvittämään</b>, kuinka paljon pystyisimme
           kunnallispoliittisilla päätöksillä vaikuttamaan laitoskeittiöiden ja
           kauppojen hävikkiruoan määrään. Haluaisin, että kaikilla ruoan kanssa
           tekemisissä olevilla yrityksillä olisi velvollisuus jakaa tai myydä
@@ -53,8 +63,8 @@ const list: AccordionProps[] = [
           leipäjonojen kautta apua tarvitseville.
         </p>
         <p>
-          Kunnan ostopäätöksissä tulee suosia paikallista ja kestävää - en näe
-          järkeä siinä, että esimerkiksi Kiinassa tuotetaan vaatteita
+          <b>Kunnan ostopäätöksissä tulee suosia</b> paikallista ja kestävää -
+          en näe järkeä siinä, että esimerkiksi Kiinassa tuotetaan vaatteita
           Eurooppaan, kun Euroopassa voisi tuottaa vaatteita Eurooppaan. Ainoa
           peruste tälle onkin se, että monessa Euroopan ulkopuolisessa valtiossa
           on helpommin saatavilla hyväksikäytettävää halpatyövoimaa. Tämä on
@@ -62,17 +72,26 @@ const list: AccordionProps[] = [
           ihmisoikeuskysymyksiin, ja ilmaston kannalta kestävät poliittiset
           päätökset ovat myös ihmisoikeuksien kannalta parempia.
         </p>
-      </>
+      </motion.div>
     ),
   },
   {
     id: 'anticap',
     title: <h3 className='text-red-100'>Antikapitalismi</h3>,
     description: (
-      <>
+      <motion.div
+        initial={{ opacity: 0, scaleY: 0 }}
+        animate={{
+          opacity: 1,
+          scaleY: 1,
+          transition: { type: 'ease-in', duration: 0.5 },
+        }}
+        exit={{ opacity: 0, scaleY: 0 }}
+        style={{ transformOrigin: 'top' }}
+      >
         {' '}
         <p>
-          Politiikassa ollaan jo pitkään menty sillä suunnalla, että vain
+          <b>Politiikassa ollaan jo pitkään</b> menty sillä suunnalla, että vain
           rahalla on väliä ja vahvimmat selviävät. Kampanjani pyrkii menemään
           vastakarvaan tälle suunnalle – sen sijaan että panostetaan vain
           kaikkeen, mikä tuottaa rahaa, olisi tärkeä panostaa siihen, mikä
@@ -96,10 +115,10 @@ const list: AccordionProps[] = [
           taajamissa asuminen saataisiin pidettyä mielekkäänä.
         </p>
         <p>
-          Kuulen usein puhuttavan, ettei Suomessa olisi korruptiota, mutta väite
-          on mielestäni naurettava. Isoilla yrityksillä on varaa lahjoittaa
-          heille mieleisten poliitikkojen vaalikampanjoihin, ja monet poliitikot
-          ovat myös itse yritysten johtoportaissa. Lobbauksella ja
+          <b>Kuulen usein puhuttavan</b>, ettei Suomessa olisi korruptiota,
+          mutta väite on mielestäni naurettava. Isoilla yrityksillä on varaa
+          lahjoittaa heille mieleisten poliitikkojen vaalikampanjoihin, ja monet
+          poliitikot ovat myös itse yritysten johtoportaissa. Lobbauksella ja
           hyvävelikerhoilla varmistetaan sellaiset poliittiset päätökset ja
           hankkeet, joilla yritykset pystyvät tekemään tuottoa. Mielestäni yksi
           isoimmista vahvuuksistani poliitikkona olisikin se, ettei minulla ole
@@ -108,17 +127,26 @@ const list: AccordionProps[] = [
           äänestäjät voivat luottaa, että kunnanvaltuutettuna tekisin päätöksiä
           aidosti kunnan asukkaiden parasta ajatellen.
         </p>
-      </>
+      </motion.div>
     ),
   },
   {
     id: 'equality',
     title: <h3 className='text-cyan-100'>Tasa-arvo & ihmisoikeudet</h3>,
     description: (
-      <>
+      <motion.div
+        initial={{ opacity: 0, scaleY: 0 }}
+        animate={{
+          opacity: 1,
+          scaleY: 1,
+          transition: { type: 'ease-in', duration: 0.5 },
+        }}
+        exit={{ opacity: 0, scaleY: 0 }}
+        style={{ transformOrigin: 'top' }}
+      >
         {' '}
         <p>
-          Tasa-arvoon ja oikeudenmukaisuuteen pyrkimisen kuuluisi olla
+          <b>Tasa-arvoon ja oikeudenmukaisuuteen</b> pyrkimisen kuuluisi olla
           yhteiskunnan perusolettamus, mutta silti useiden eri vähemmistöjen
           sekä köyhien ja heikommassa asemassa olevien oikeuksien puolustaminen
           vaatii jatkuvaa taistelua. Olen kuitenkin lopen kyllästynyt nykyisen
@@ -133,8 +161,8 @@ const list: AccordionProps[] = [
           häiriöttä eteenpäin.
         </p>
         <p>
-          Tiedostan, että kunnanvaltuutettuna tai kuntavaaliehdokkaana ei voi
-          tehdä määräänsä enempää maailmanpolitiikan suurien linjojen eteen,
+          <b>Tiedostan, että kunnanvaltuutettuna</b> tai kuntavaaliehdokkaana ei
+          voi tehdä määräänsä enempää maailmanpolitiikan suurien linjojen eteen,
           mutta jotta äänestäjät tietävät, millaista ehdokasta ovat
           äänestämässä, niin haluan myös ilmaista vahvat tuntemukseni
           ulkopolitiikan kysymyksistä, jotka peilaavat hyvin
@@ -164,13 +192,13 @@ const list: AccordionProps[] = [
           Länsimaiden käyttöön lähtömaiden pysyessä köyhinä.
         </p>
         <p>
-          Nyt jos koskaan on aika laittaa yhteiskuntamme peruspilarit uusiksi,
-          lopettaa luonnon ja ihmisten riisto, tehdä varallisuuden
+          <b>Nyt jos koskaan</b> on aika laittaa yhteiskuntamme peruspilarit
+          uusiksi, lopettaa luonnon ja ihmisten riisto, tehdä varallisuuden
           uudelleenjakoa rikkailta leikaten, päästää irti jatkuvan kasvun
           tavoittelusta ja pyrkiä tuottamaan hyödykkeitä kestävästi vain sen
           verran kuin niitä oikeasti tarvitaan. Ei anneta epätoivon voittaa!
         </p>
-      </>
+      </motion.div>
     ),
   },
 ];
@@ -182,77 +210,107 @@ export default function Home() {
         <title>Aaro Viitanen</title>
         <meta name='description' content='Aaro Viitasen portfolio-sivu' />
       </Head>
-      <div className=''>
-        <Image
-          className='fixed w-screen h-screen -z-50 opacity-5'
-          src='/morningwood.jpg'
-          alt='Background'
-          width={700}
-          height={700}
-        />
-        <div className='fixed md:block hidden h-screen top-0 right-0 w-10 bg-[#080401]'></div>
-
-        <main className=' '>
-          <div className='sticky border-b top-0 bg-black bg-opacity-50 z-50 backdrop-blur'>
-            <h1>Aaro Viitanen</h1>
-            <div className='flex flex-row'>
-              <h2 className='font-bold text-5xl text-pink-500'>V</h2>
-              <h2 className='-mt-1'>asemmistoliitto</h2>
-            </div>
-          </div>
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 0.5 },
+          }}
+        >
           <Image
-            id='pfp'
-            className='md:fixed md:right-10 top-28 mt-4 md:mt-0 content-center rounded-full md:rounded-l-none -scale-x-100 -z-50'
-            src='/aaro.jpg'
-            alt='Aaro Viitanen'
-            width={500}
-            height={500}
+            className='fixed w-screen h-screen -z-50 opacity-5'
+            src='/morningwood.jpg'
+            alt='Background'
+            width={700}
+            height={700}
           />
-          <section id='intro'>
-            <h3>Tervehdys!</h3>
-            <p>
-              Olen Aaro Viitanen, 26-vuotias muusikko ja musiikkikasvatuksen
-              opiskelija Jyväskylästä. Olen Vasemmistoliiton ehdokkaana kevään
-              2025 kuntavaaleissa, koska politiikka ja siinä mukana oleminen on
-              kiinnostanut aina, ja nyt jos koskaan tarvitaan täyskäännös pois
-              nykyisen hallituksen ajamasta brutaalin oikeistolaisesta
-              politiikasta. Tämänhetkinen jatkuvaan kasvuun pohjautuva
-              kapitalistinen yhteiskuntajärjestelmämme on ajanut planeetan
-              massiiviseen ekokatastrofiin, ja meidän on mahdollisimman pian
-              kehitettävä vähemmän tuhoisa vaihtoehto pyörittää yhteiskuntaa.
-              Kestävän yhteiskunnan luominen on suuri prosessi, joka vaatii
-              toimia yhteiskunnan kaikilta tasoilta, eli myös kunnilta.
-            </p>
-            <p>
-              Puoluepolitiikan suhteen olen vielä noviisi, ja nämä ovat
-              ensimmäiset vaalit, joihin olen ehdolla. Minulla on kuitenkin
-              jonkin verran ulkoparlamentaarista poliittista kokemusta
-              mielenosoituksiin ja kansalaisaktivismiin sekä niiden
-              järjestämiseen osallistumisesta esimerkiksi No Cuts Jkl
-              –kollektiivin riveissä. Olen myös tehnyt vuosia someaktivismia
-              erään keskikokoisen poliittisen meemitilin ylläpitäjänä
-              Instagramissa ja osallistunut aktiivisesti poliittiseen
-              keskusteluun niin sosiaalisen median alustoilla kuin ihmisten
-              kanssa kasvotusten. Minulla tulee varmasti olemaan paljon
-              opittavaa kuntapolitiikasta, mutta mielestäni tärkeintä onkin se,
-              että olen valmis oppimaan, kuuntelemaan ja keskustelemaan avoimin
-              mielin, samalla kuitenkin omasta arvomaailmastani tiukasti kiinni
-              pitäen.
-            </p>
-          </section>
-          <Accordion>
-            {list.map((item) => (
-              <section key={item.id} id={item.id}>
-                <AccordionItem id={item.id}>
-                  <AccordionTrigger> {item.title}</AccordionTrigger>
-                  <AccordionContent>{item.description}</AccordionContent>
-                </AccordionItem>
-              </section>
-            ))}
-          </Accordion>
-        </main>
-        {/* ------------------ */}
-      </div>
+          <div className='fixed md:block hidden h-screen top-0 right-0 w-10 bg-[#080401]'></div>
+
+          <main className=' '>
+            <div className='sticky border-b top-0 bg-black bg-opacity-50 z-50 backdrop-blur'>
+              <h1>Aaro Viitanen</h1>
+              <div className='flex flex-row'>
+                <h2 className='font-bold text-5xl text-pink-500'>V</h2>
+                <h2 className='-mt-1'>asemmistoliitto</h2>
+              </div>
+              <Image
+                src='/bird.svg'
+                alt='Bird'
+                width={80}
+                height={80}
+                style={{ filter: 'invert(1)' }}
+                className='absolute right-2 top-2 opacity-10'
+              />
+            </div>
+            <Image
+              id='pfp'
+              className='md:fixed md:right-10 top-28 mt-4 md:mt-0 content-center rounded-full md:rounded-l-none -scale-x-100 -z-50'
+              src='/aaro.jpg'
+              alt='Aaro Viitanen'
+              width={500}
+              height={500}
+            />
+            <motion.section
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: { duration: 0.75, type: 'spring' },
+              }}
+              id='intro'
+            >
+              <h3>Tervehdys!</h3>
+              <p>
+                <b>Olen Aaro Viitanen</b>, 26-vuotias muusikko ja
+                musiikkikasvatuksen opiskelija Jyväskylästä. Olen
+                Vasemmistoliiton ehdokkaana kevään 2025 kuntavaaleissa, koska
+                politiikka ja siinä mukana oleminen on kiinnostanut aina, ja nyt
+                jos koskaan tarvitaan täyskäännös pois nykyisen hallituksen
+                ajamasta brutaalin oikeistolaisesta politiikasta. Tämänhetkinen
+                jatkuvaan kasvuun pohjautuva kapitalistinen
+                yhteiskuntajärjestelmämme on ajanut planeetan massiiviseen
+                ekokatastrofiin, ja meidän on mahdollisimman pian kehitettävä
+                vähemmän tuhoisa vaihtoehto pyörittää yhteiskuntaa. Kestävän
+                yhteiskunnan luominen on suuri prosessi, joka vaatii toimia
+                yhteiskunnan kaikilta tasoilta, eli myös kunnilta.
+              </p>
+              <p>
+                <b>Puoluepolitiikan suhteen</b> olen vielä noviisi, ja nämä ovat
+                ensimmäiset vaalit, joihin olen ehdolla. Minulla on kuitenkin
+                jonkin verran ulkoparlamentaarista poliittista kokemusta
+                mielenosoituksiin ja kansalaisaktivismiin sekä niiden
+                järjestämiseen osallistumisesta esimerkiksi No Cuts Jkl
+                –kollektiivin riveissä. Olen myös tehnyt vuosia someaktivismia
+                erään keskikokoisen poliittisen meemitilin ylläpitäjänä
+                Instagramissa ja osallistunut aktiivisesti poliittiseen
+                keskusteluun niin sosiaalisen median alustoilla kuin ihmisten
+                kanssa kasvotusten. Minulla tulee varmasti olemaan paljon
+                opittavaa kuntapolitiikasta, mutta mielestäni tärkeintä onkin
+                se, että olen valmis oppimaan, kuuntelemaan ja keskustelemaan
+                avoimin mielin, samalla kuitenkin omasta arvomaailmastani
+                tiukasti kiinni pitäen.
+              </p>
+            </motion.section>
+            <Accordion>
+              {list.map((item) => (
+                <motion.section
+                  initial={{ x: 100, scale: 0 }}
+                  animate={{ x: 0, scale: 1 }}
+                  key={item.id}
+                  id={item.id}
+                >
+                  <AccordionItem id={item.id}>
+                    <AccordionTrigger> {item.title}</AccordionTrigger>
+                    <AccordionContent>{item.description}</AccordionContent>
+                  </AccordionItem>
+                </motion.section>
+              ))}
+            </Accordion>
+          </main>
+          {/* ------------------ */}
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 }
