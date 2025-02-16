@@ -132,7 +132,11 @@ const list: AccordionProps[] = [
   },
   {
     id: 'equality',
-    title: <h3 className='text-cyan-100'>Tasa-arvo & ihmisoikeudet</h3>,
+    title: (
+      <h3 className='text-cyan-100 md:text-3xl text-[1.4rem] whitespace-nowrap'>
+        Tasa-arvo & ihmisoikeudet
+      </h3>
+    ),
     description: (
       <motion.div
         initial={{ opacity: 0, scaleY: 0 }}
